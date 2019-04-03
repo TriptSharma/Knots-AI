@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\title{Artificial Intelligence Project}
+\author{Tript Sharma, Vipul Garg}
+
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\line(1,0){300}\\
+			[0.25in]
+			\huge\bfseries Artificial Intelligence\\
+			[2mm]
+			\line(1,0){200}\\
+			[0.5in]
+			
+			\uppercase{\huge KNOTS}\\
+			[0.75cm]
+			
+			\uppercase{\large Delhi Technological University}\\
+			[10cm]
+			
+		\end{center}
+		\begin{flushleft}
+			\textsc{\large Dhirendra Kumar} \\
+		\end{flushleft}
+			
+		\begin{flushright}
+			\textsc{\large Tript Sharma\\ 
+			\large Vipul Garg\\
+			\large Rishabh Nasa \\}
+		\end{flushright}
+		
+	\end{titlepage}
+	
+	\section[1.]{Introduction}
+Since the last decade, Artificial Intelligence (AI) has evolved to a greater extent because of the emerging technologies such as Computer Vision, Machine learning, NLP ( Natural Language Processing) and Sensor Fusion. These technologies not only open the path to dynamic and robust AI but also plays a major role in humanoid robots like Sophia which was  a dream for last generation. The major difficulty faced by all engineers is to untangle the interdependency of every domain. No engineer can be an expert of all and so they always looked for persons from different fields to complete their unsolved puzzle. According to a survey, 3465 AI companies are competing to each other and developing strong AI systems and so it can be assumed that there is existence of a dedicated AI system for any corresponding problem. If this is true, then it would be a wise move to use the developed systems rather than developing a new one from scratch for any interdisciplinary application. It not only saves time but also ensures reliability and provides flexibility leading to efficient and independent system.
+
+	\section{Motivation}
+We aim to create a strong AI by using an ensemble of weak AIs. This agent would help researchers and aspirers to develop a suitable pipeline and put it into implementation via thi project.
+
+This project is a prototype for the mentioned approach. We aim to create a robot like CMU’s Shmoobot \cite{shmoo}, a ballbot that can effectively communicate with humans and better understand the world. It consists of a natural speech interface for better understanding of the world could enable robots to take on more general purpose use. As users could interactively specify tasks, and robots could provide feedback and semantic knowledge of the world in an intuitive way.
+
+In this project we aim to develop a robot that would receive a command from the user like “Shoot the red box”. The command along with the corresponding frame captured by the camera are sent to the server. The server processes the request and returns the position and orientation of the red box relative to the bot. The bot takes the action with the help of servos and stepper motors \cite{bot}.
+
+	\section{Proposed Approach}
+As shown in \ref{Fig1}, there are different blocks which belongs to a single unit. Further these blocks are divided into small units. Brief description of each block is provided below.
+
+\begin{enumerate}
+	\item Providers:\\
+This is the basic and essential block of our project work. As we have mentioned before, to complete the request of a client/robot there should be a corresponding weak AI which is best in its domain. In our context, weak AI corresponds to real time processor with the ability to solve specific or general queries. For our work, we will take 2 independent real time processors. One of them is based on NLP and find the word used in the speech \cite{nlp}, and other is proficient in detection of objects \cite{cv}, based on  their appearance. 
+
+	\item Broker/Server: \\
+Server is the main component and works as a broker. It receives the queries from different clients and break them into small queries as much as possible until it converts into a set of specific problems. After having the problems, it finds itself an available AI which can solve it. In simple words, collection of requests from multiple client takes place followed by breaking of each query into small and specific problems and distribution of the problems to all designated AIs in a specific order and returning the end result to client. This is the objective of the broker.  
+
+	\item Clients/Robots: \\
+Clients are the end users. These are responsible to generate a query in specific format and use the end results received from the broker. We are planning to design a robot equipped with two sensors and one actuators. One of the sensor is camera which will serve the purpose of eye and other sensor is a microphone which is analogous to ears. 
+
+\end{enumerate} 
+
+\begin{figure}
+\label{Fig1}
+\centering
+\includegraphics[width = 1.0\linewidth]{Flowchart_updated}
+\caption{Proposed Approach}
+\end{figure}
+
+\bibliographystyle{plain}
+\bibliography{ref}
+\end{document}

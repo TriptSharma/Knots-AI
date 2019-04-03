@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{bot}
+Hayder Abdulsada.
+\newblock Proposed algorithm to solve inverse kinematics problem of the robot.
+\newblock {\em European Journal of Scientific Research}, 149:376--384, 07 2018.
+
+\bibitem{nlp}
+Shipra J.Arora and Rishi Singh.
+\newblock Automatic speech recognition: A review.
+\newblock {\em International Journal of Computer Applications}, 60:34--44, 12
+  2012.
+
+\bibitem{cv}
+Khamar~Basha Shaik, P~Ganesan, V~Kalist, BS~Sathish, and J~Merlin~Mary Jenitha.
+\newblock Comparative study of skin color detection and segmentation in hsv and
+  ycbcr color space.
+\newblock {\em Procedia Computer Science}, 57:41--48, 2015.
+
+\bibitem{shmoo}
+Matthew Wilson, Jean Oh, and Ralph Hollis.
+\newblock Go, look, and tell: Natural language communication with a ballbot.
+
+\end{thebibliography}
