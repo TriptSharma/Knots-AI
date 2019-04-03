@@ -15,5 +15,3 @@ data = {
     "name": "Mortimer 'Morty' Smith"
 }
 results = db.child("users").push(data)
-
-
