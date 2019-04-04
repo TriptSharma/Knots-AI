@@ -1,15 +1,18 @@
 # import the necessary packages
 import numpy as np
-import argparse
 import cv2
+from get_data import download_file
 
-# construct the argument parse and parse the arguments
-ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--image", help = "path to the image")
-args = vars(ap.parse_args())
+#download_file
+if download_file('data', 'image') == False:
+	print("Exiting with error")
+	exit()
+
+print("file downloaded successfully")
+
 
 # load the image
-image = cv2.imread(args["image"])
+image = cv2.imread('example.jpg')
 
 # define the list of boundaries
 #red, green, blue, gray
