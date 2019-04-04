@@ -13,7 +13,7 @@ unique_id = 1000000
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 storage = firebase.storage()
-storage.child(str(unique_id)+"/audio/audio.wav").put("audio.wav")
+storage.child(str(unique_id)+"/audio/sound.wav").put("sound.wav")
 data = {
     "services": {
         "camera":1,
@@ -21,9 +21,16 @@ data = {
         "move":1
     },
     "data": {
-    "image": -1,
-    "audio": str(unique_id)+"/audio/audio.wav",
-    "movement": 3
+    "image": str(unique_id)+"/images/example.jpg",
+    "audio": str(unique_id)+"/audio/sound.wav",
+    "movement":{
+      "category":"d_drive",
+      "errors":{
+        "error": 3,
+        "e_old": 0,
+        "e_sum": 0
+      } 
+    }
     },
     "status": 2, # -1 for not possible, 0 for unoccupied, 1 for occupied and 2 for done 
     "time":str(time.time())
