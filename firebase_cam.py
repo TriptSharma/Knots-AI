@@ -36,3 +36,4 @@ if ret==True:
 # When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64\ ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}

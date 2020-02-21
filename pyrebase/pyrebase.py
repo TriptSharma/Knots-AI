@@ -16,7 +16,7 @@ import threading
 import socket
 from oauth2client.service_account import ServiceAccountCredentials
 from gcloud import storage
-from requests.packages.urllib3.contrib.appengine import is_appengine_sandbox
+from urllib3.contrib.appengine import is_appengine_sandbox
 from requests_toolbelt.adapters import appengine
 
 import python_jwt as jwt

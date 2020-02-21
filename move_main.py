@@ -17,8 +17,6 @@ users = db.child("queries").get(get_dict=True)
 sorted_users = sorted(users.items(), key=lambda x: x[1]['time'])
 
 sorted_users = list(sorted_users)
-#print(sorted_users)
-
 
 i = 0
 while 1:
