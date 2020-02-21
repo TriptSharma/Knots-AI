@@ -20,6 +20,25 @@ exports.checkQuery = functions.database.ref('/queries/{pushid}')
 		// You must return a Promise when performing asynchronous tasks inside a Functions such as
 		// writing to the Firebase Realtime Database.
 		// Setting an "uppercase" sibling in the Realtime Database returns a Promise.
-		const status = 1
-		return snapshot.ref.parent.child('status').set(status);
+		const status = 1;
+		let cv;
+		if (original.services.camera === 1){
+			cv = {data: original.data.image,
+				qStatus: original.status,
+				time : original.time,
+				result : null,
+				pStatus : 0
+			}
+		}
+		let nlp;
+		if (original.services.NLP === 1){
+			nlp = {data: original.data.audio,
+				qStatus: original.status,
+				time : original.time,
+				result : null,
+				pStatus : 0
+			}
+		}
+
+		return snapshot.ref.parent.parent.child(`/CVP/${context.params.pushid}`).set(cv), snapshot.ref.parent.parent.child(`/NLP/${context.params.pushid}`).set(nlp);
 	});
