@@ -1,5 +1,6 @@
 import speech_recognition as sr
-import  keyboard
+
+FILENAME = "audio_file.wav"
 
 r = sr.Recognizer()
 mic = sr.Microphone()
@@ -13,7 +14,7 @@ with mic as source:
         # break
     print('Stopped')
 
-with open("audio_file.wav", "wb") as file:
+with open(FILENAME, "wb") as file:
     print('Saving Audio...')
     file.write(audio.get_wav_data())
 

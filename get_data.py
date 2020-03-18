@@ -34,12 +34,15 @@ def download_file(folder):
 	datapath = sorted_users[0][1]['data']
 	# print(datapath)
 	path = datapath[folder]
+	filename = folder
 	try:
 		if folder == 'audio':
-			storage.child(str(path)).download("sound.wav")
+			filename+='.wav'
+			
 		elif folder == 'image':
-			storage.child(str(path)).download("example.jpg")
-		return True
+			filename+='.jpg'
+		storage.child(str(path)).download(filename)
+		return filename
 	except:
 		print("File not accessible!")
-		return False
+		return None
