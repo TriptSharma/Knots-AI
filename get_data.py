@@ -32,12 +32,13 @@ def get_sorted_data():
 def download_file(folder):
 	sorted_users = get_sorted_data()
 	datapath = sorted_users[0][1]['data']
-	audiopath = datapath[folder]
+	# print(datapath)
+	path = datapath[folder]
 	try:
-		if subfolder == 'audio':
-			storage.child(str(audiopath)).download("sound.wav")
-		elif subfolder == 'image':
-			storage.child(str(audiopath)).download("example.jpg")
+		if folder == 'audio':
+			storage.child(str(path)).download("sound.wav")
+		elif folder == 'image':
+			storage.child(str(path)).download("example.jpg")
 		return True
 	except:
 		print("File not accessible!")

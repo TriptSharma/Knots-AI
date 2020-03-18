@@ -2,7 +2,7 @@ import speech_recognition as sr
 from get_data import download_file
 
 #download_file
-if download_file('data', 'audio') == False:
+if download_file('audio') == False:
 	print("Exiting with error")
 	exit()
 
